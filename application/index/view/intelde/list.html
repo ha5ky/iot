@@ -1,0 +1,87 @@
+<div id="page-wrapper" >
+	<div class="header"> 
+		<h1 class="page-header">
+			设备列表
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">智能设备</a></li>
+			<li class="active">设备列表</li>
+		</ol> 
+
+	</div>
+
+	<div id="page-inner">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="card">
+					<div class="card-content">
+						<span class="card-title">当前在线设备</span>
+						<a href="{:url('index/Main/deadd')}"><span class="card-title pull-right">添加智能设备</span></a>
+					</div>
+					<div class="card-action">
+						<div class="table-responsive">
+							<table class="table table-striped table-hover" id="">
+								<thead>
+									<tr>
+										<th>图标</th>
+										<th>ID</th>
+										<th>名称</th>
+										<th>APIKEY</th>
+										<th class="center">是否开放</th>
+										<th class="center">在线状态</th>
+										<th class="center">在线时间</th>
+										<th class="center">编辑</th>
+										<th class="center">控制模式</th>
+										<th>二维码</th>
+										<th>更新密码</th>
+									</tr>
+								</thead>
+								<tbody>
+									{volist name="list" id="vosub"}
+										<!-- <foreach name="vo" item="vosub"> {$vosub['de_pic']}-->
+											<tr class="odd gradeX">
+												<td><img src="{$vosub['de_pic']}"></td>
+												<td>{$vosub.de_id}</td>
+												<td>{$vosub.de_name}</td>
+												<td>{$vosub.de_apikey}</td>
+												<td class="center">
+													{if condition="$vosub['de_open'] eq 1"}
+														开放
+														{else/}关闭
+													{/if}
+												</td>
+												<td class="center">
+													{if condition="$vosub['de_open'] eq 1"}
+														在线
+														{else/}离线
+													{/if}
+												</td>
+												<td class="center">
+													<?php echo $vosub['de_ontime'] - $vosub['de_offtime']; ?>
+												</td>
+												<td class="center">
+													<a href="" style="color: inherit;"><i class="material-icons">mode_edit</i></a>
+												</td>
+												<td class="center" >
+													<div style="display: inline;">
+														<a href="" style="color: inherit;"><i class="material-icons">perm_camera_mic</i></a>
+													<a href="" style="color: inherit;"><i class="material-icons">dashboard</i></a>
+													<a href="" style="color: inherit;"><i class="material-icons">assessment</i></a>
+													</div>
+												</td>
+												<td></td>
+												<td></td>
+											</tr>
+										<!-- {/foreach} -->
+									{/volist}
+
+								</tbody>  
+							</table>  
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>

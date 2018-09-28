@@ -1,0 +1,79 @@
+<div id="page-wrapper" >
+	<div class="header"> 
+		<h1 class="page-header">
+			设备对话
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">智能设备</a></li>
+			<li class="active">设备对话</li>
+		</ol> 
+
+	</div>
+
+	<div id="page-inner"> 
+
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="card">
+					<div class="card-content">
+						<span class="card-title">当前在线设备</span>
+					</div>
+					<div class="card-action">
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="" type="text" value="·111" class="validate" readonly="">
+								<!-- <input type="text" name="" class="alert" placeholder="请输入账户"> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 col-sm-12">
+				<div class="card">
+					<div class="card-content">
+						<span class="card-title">当前在线设备</span>
+					</div>
+					<div class="card-action">
+						<form role="form" method="post" action="{:url('')}">
+							<div class="input-group">
+								<span class="input-group-addon">命令发送目标</span>
+								<div class="form-group has-default">  
+									<select class="form-control">  
+										<option>所有人</option>  
+										<option value=""><?php echo session('username'); ?></option>  
+										<option>3</option>  
+										<option>4</option>  
+									</select>  
+								</div>  
+							</div>						
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="" type="text" value="" class="" >
+									<!-- <input type="text" name="" class="alert" placeholder="请输入账户"> -->
+								</div>
+							</div>
+							<div>  
+								<input type="submit" class="btn btn-primary">  
+							</div> 
+						</form>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-md-12 col-sm-12">
+				<div class="card">
+					<div class="card-content">
+						<span class="card-title">当前在线设备</span>
+					</div>
+					<div class="card-action">
+						<div class="alert alert-success">
+							<h3>系统消息</h3>
+							<br>
+							<h5><?php echo session('username'); ?>上线</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

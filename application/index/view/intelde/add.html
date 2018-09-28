@@ -1,0 +1,60 @@
+<div id="page-wrapper" >
+  <div class="header"> 
+    <h1 class="page-header">
+      添加设备
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#">首页</a></li>
+      <li><a href="#">智能设备</a></li>
+      <li class="active">添加设备</li>
+    </ol> 
+
+  </div>
+
+  <div id="page-inner"> 
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-action">
+            智能设备
+          </div>
+          <div class="card-content">
+            <form class="col s12" method="post" action="{:url('index/Main/deadd')}" enctype="multipart/form-data">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="name" type="text" name="dename" class="validate">
+                  <label for="name">设备名称</label>
+                </div>
+              </div>
+              <div class="row col-md-12">
+                <p class="pull-left">
+                  <input class="with-gap" name="deopen" type="radio" id="on" value="1" />
+                  <label for="on">公开</label>
+                </p>
+                <p class="pull-right">
+                  <input class="with-gap" name="deopen" type="radio" id="off" value="0" />
+                  <label for="off">不公开</label>
+                </p>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" name="deintro" class="materialize-textarea"></textarea>
+                  <label for="textarea1">设备简介</label>
+                </div>
+              </div>
+              <div class="row">
+                <p class="col-md-2">选择图片</p>
+                <input type="file" placeholder="" name="img" class="col-md-8">
+              </div>
+              <div class="row col-md-6">
+                <input type="submit" name="" class="btn btn-primary">
+                <input type="reset" name="" class="btn btn-warning">
+              </div>
+            </form>
+            <div class="clearBoth"></div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+</div>
