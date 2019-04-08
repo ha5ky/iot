@@ -28,9 +28,9 @@ class Login extends Controller
 				if ($info = $user->retrieveUser($account,$pwd)) {
 					Session::set('userid',$info[0]['user_id']);
 					Session::set('username',$info[0]['user_name']);
-					// dump($info);die();
-					// echo session('username');die();
-					// $view->assign('name',Session::get('username'));
+					dump($info);die();
+					echo session('username');die();
+					$view->assign('name',Session::get('username'));
 					$this->success('登录成功','index/Main/index');
 				}else{
 					$this->error('登录失败');

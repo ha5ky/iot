@@ -17,7 +17,7 @@
  * 如果发现业务卡死，可以将下面declare打开（去掉//注释），并执行php start.php reload
  * 然后观察一段时间workerman.log看是否有process_timeout异常
  */
-//declare(ticks=1);
+//declare(ticks=1); 
 
 use \GatewayWorker\Lib\Gateway;
 
@@ -50,7 +50,7 @@ class Events
    public static function onMessage($client_id, $message)
    {
         // 向所有人发送 
-        Gateway::sendToAll("$client_id said $message test\r\n");
+        Gateway::sendToAll("$client_id said $message\r\n");
    }
    
    /**

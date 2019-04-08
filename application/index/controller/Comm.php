@@ -16,9 +16,5 @@ class Comm extends Controller
 		}else{
 			$this->error("请登录",'login/index');
 		}
-	}
-
-	
-
-	
+	}	
 }
