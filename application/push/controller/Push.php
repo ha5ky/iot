@@ -6,10 +6,13 @@ use
 
 class Push extends Controller
 {
+<<<<<<< HEAD
 
     public function index() {
         Gateway::sendToClient($client_id, "Hello $client_id\r\n");;
     }
+=======
+>>>>>>> iot by yoga
    
     public function hello () {
         $uid = $_POST['uid'];

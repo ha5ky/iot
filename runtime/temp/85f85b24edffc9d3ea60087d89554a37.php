@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"C:\phpStudy\PHPTutorial\WWW\iot\public/../application/index\view\index\ws.html";i:1530463029;}*/ ?>
-=======
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"C:\phpStudy\PHPTutorial\WWW\iot\public/../application/index\view\index\ws.html";i:1531795366;}*/ ?>
->>>>>>> iot by yoga
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"D:\PHPTutorial\WWW\iot\public/../application/index\view\index\ws.html";i:1553604882;}*/ ?>
 
 <script src="/static/assets/js/jquery-1.10.2.js"></script>
 <script type="text/javascript">
@@ -12,9 +8,20 @@
  * start_gateway.php 中需要指定websocket协议，像这样
  * $gateway = new Gateway(websocket://0.0.0.0:7272);
  */
+<<<<<<< HEAD
+
+ws = new WebSocket("ws://127.0.0.1:8282");
+// alert('111');
+// 服务端主动推送消息时会触发这里的onmessage
+
+ws.onmessage = function(e){
+    // alert(e.data);
+    // alert('111');
+=======
 ws = new WebSocket("ws://127.0.0.1:8282");
 // 服务端主动推送消息时会触发这里的onmessage
 ws.onmessage = function(e){
+>>>>>>> iot by yoga
     // json数据转换成js对象
     var bindUrl = "<?php echo url('push/push/BindClientId'); ?>";
     var data = e.data;
@@ -33,7 +40,11 @@ ws.onmessage = function(e){
         var text = e.data;
             var str = '<li style="width:100%; height:60px; border:1px solid #000">' +text +'</li>';
             $('#message_box').append();
+<<<<<<< HEAD
+           alert(e.data);
+=======
            // alert(e.data);
+>>>>>>> iot by yoga
     }
 };
 </script>

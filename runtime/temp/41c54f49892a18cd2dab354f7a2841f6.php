@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:73:"D:\PHPTutorial\WWW\iot\public/../application/index\view\intelde\list.html";i:1530010956;s:57:"D:\PHPTutorial\WWW\iot\application\index\view\layout.html";i:1529741253;s:64:"D:\PHPTutorial\WWW\iot\application\index\view\public\header.html";i:1553651351;s:64:"D:\PHPTutorial\WWW\iot\application\index\view\public\footer.html";i:1529746569;}*/ ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 <head>
@@ -5,19 +6,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minium-scale=1.0,user-scalable=0">
   <title>iot云平台</title> 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="__MAT__/css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="/static/assets/materialize/css/materialize.min.css" media="screen,projection" />
   <!-- Bootstrap Styles-->
-  <link href="__CSS__/bootstrap.css" rel="stylesheet" />
+  <link href="/static/assets/css/bootstrap.css" rel="stylesheet" />
   <!-- FontAwesome Styles-->
-  <link href="__CSS__/font-awesome.css" rel="stylesheet" />
+  <link href="/static/assets/css/font-awesome.css" rel="stylesheet" />
   <!-- Morris Chart Styles-->
-  <link href="__JS__/morris/morris-0.4.3.min.css" rel="stylesheet" />
+  <link href="/static/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
   <!-- Custom Styles-->
-  <link href="__CSS__/custom-styles.css" rel="stylesheet" />
+  <link href="/static/assets/css/custom-styles.css" rel="stylesheet" />
   <!-- Google Fonts-->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-  <link rel="stylesheet" href="__JS__/Lightweight-Chart/cssCharts.css"> 
-  <!-- <script type="text/javascript" src="__JS__/jquery-3.3.1.min.js"></script> -->
+  <link rel="stylesheet" href="/static/assets/js/Lightweight-Chart/cssCharts.css"> 
+  <!-- <script type="text/javascript" src="/static/assets/js/jquery-3.3.1.min.js"></script> -->
   <style type="text/css">
     .table tbody tr td{
             vertical-align: middle;
@@ -53,7 +54,7 @@
             </li>
             <li><a href="#"><i class="fa fa-gear fa-fw"></i> 设置</a>
             </li> 
-            <li><a href="{:url('index/Login/logout')}"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+            <li><a href="<?php echo url('index/Login/logout'); ?>"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
             </li>
           </ul>
           <ul id="dropdown2" class="dropdown-content w250">
@@ -218,22 +219,22 @@
   <div class="sidebar-collapse">
     <ul class="nav" id="main-menu">
       <li>
-        <a class="<?php echo getAction() == 'index' ? 'active-menu' : '' ?> waves-effect waves-dark" href="{:url('index/Main/index')}"><i class="fa fa-dashboard"></i>仪表盘</a>
+        <a class="<?php echo getAction() == 'index' ? 'active-menu' : '' ?> waves-effect waves-dark" href="<?php echo url('index/Main/index'); ?>"><i class="fa fa-dashboard"></i>仪表盘</a>
       </li>
       <li>
         <a href="#" class="waves-effect waves-dark"><i class="fa fa-desktop"></i> 智能设备<span class="fa arrow"></span></a>
         <ul id="play" style="<?php echo displayAways(getAction()); ?>" class="nav nav-second-level">
           <li>
-            <a class="<?php echo getAction() == 'delist' ? 'active-menu' : '' ?>" href="{:url('index/Main/delist')}"><i class="fa fa-list"></i>设备列表</a>
+            <a class="<?php echo getAction() == 'delist' ? 'active-menu' : '' ?>" href="<?php echo url('index/Main/delist'); ?>"><i class="fa fa-list"></i>设备列表</a>
           </li>
           <li>
-            <a class="<?php echo getAction() == 'dechat' ? 'active-menu' : '' ?>" href="{:url('index/Main/dechat')}"><i class="fa fa-list"></i>设备对话</a>
+            <a class="<?php echo getAction() == 'dechat' ? 'active-menu' : '' ?>" href="<?php echo url('index/Main/dechat'); ?>"><i class="fa fa-list"></i>设备对话</a>
           </li>
           <li>
             <a href="#"><i class="fa fa-keyboard-o"></i>设备遥控</a>
           </li>
           <li>
-            <a class="<?php echo getAction() == 'deadd' ? 'active-menu' : '' ?>" href="{:url('index/Main/deadd')}"><i class="fa fa-list"></i>添加新设备</a>
+            <a class="<?php echo getAction() == 'deadd' ? 'active-menu' : '' ?>" href="<?php echo url('index/Main/deadd'); ?>"><i class="fa fa-list"></i>添加新设备</a>
           </li>
           <li>
             <a href="#"><i class="fa fa-folder"></i>获取已有设备</a>
@@ -244,10 +245,10 @@
         <a href="#" class="waves-effect waves-dark"><i class="fa fa-desktop"></i> 接口<span class="fa arrow"></span></a>
         <ul id="play" style="<?php echo displayAways(getAction()); ?>" class="nav nav-second-level">
           <li>
-            <a class="<?php echo getAction() == 'delist' ? 'active-menu' : '' ?>" href="{:url('index/Main/delist')}"><i class="fa fa-list"></i>接口列表</a>
+            <a class="<?php echo getAction() == 'delist' ? 'active-menu' : '' ?>" href="<?php echo url('index/Main/delist'); ?>"><i class="fa fa-list"></i>接口列表</a>
           </li>
           <li>
-            <a class="<?php echo getAction() == 'dechat' ? 'active-menu' : '' ?>" href="{:url('index/Main/dechat')}"><i class="fa fa-list"></i>添加接口</a>
+            <a class="<?php echo getAction() == 'dechat' ? 'active-menu' : '' ?>" href="<?php echo url('index/Main/dechat'); ?>"><i class="fa fa-list"></i>添加接口</a>
           </li>
           <li>
             <a href="#"><i class="fa fa-keyboard-o"></i>历史记录</a>
@@ -302,3 +303,127 @@
 
 </nav>
         <!-- /. NAV SIDE  -->
+	<div id="page-wrapper" >
+	<div class="header"> 
+		<h1 class="page-header">
+			设备列表
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">智能设备</a></li>
+			<li class="active">设备列表</li>
+		</ol> 
+
+	</div>
+
+	<div id="page-inner">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="card">
+					<div class="card-content">
+						<span class="card-title">当前在线设备</span>
+						<a href="<?php echo url('index/Main/deadd'); ?>"><span class="card-title pull-right">添加智能设备</span></a>
+					</div>
+					<div class="card-action">
+						<div class="table-responsive">
+							<table class="table table-striped table-hover" id="">
+								<thead>
+									<tr>
+										<th>图标</th>
+										<th>ID</th>
+										<th>名称</th>
+										<th>APIKEY</th>
+										<th class="center">是否开放</th>
+										<th class="center">在线状态</th>
+										<th class="center">在线时间</th>
+										<th class="center">编辑</th>
+										<th class="center">控制模式</th>
+										<th>二维码</th>
+										<th>更新密码</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vosub): $mod = ($i % 2 );++$i;?>
+										<!-- <foreach name="vo" item="vosub"> <?php echo $vosub['de_pic']; ?>-->
+											<tr class="odd gradeX">
+												<td><img src="<?php echo $vosub['de_pic']; ?>"></td>
+												<td><?php echo $vosub['de_id']; ?></td>
+												<td><?php echo $vosub['de_name']; ?></td>
+												<td><?php echo $vosub['de_apikey']; ?></td>
+												<td class="center">
+													<?php if($vosub['de_open'] == 1): ?>
+														开放
+														<?php else: ?>关闭
+													<?php endif; ?>
+												</td>
+												<td class="center">
+													<?php if($vosub['de_open'] == 1): ?>
+														在线
+														<?php else: ?>离线
+													<?php endif; ?>
+												</td>
+												<td class="center">
+													<?php echo $vosub['de_ontime'] - $vosub['de_offtime']; ?>
+												</td>
+												<td class="center">
+													<a href="" style="color: inherit;"><i class="material-icons">mode_edit</i></a>
+												</td>
+												<td class="center" >
+													<div style="display: inline;">
+														<a href="" style="color: inherit;"><i class="material-icons">perm_camera_mic</i></a>
+													<a href="" style="color: inherit;"><i class="material-icons">dashboard</i></a>
+													<a href="" style="color: inherit;"><i class="material-icons">assessment</i></a>
+													</div>
+												</td>
+												<td></td>
+												<td></td>
+											</tr>
+										<!-- {/foreach} -->
+									<?php endforeach; endif; else: echo "" ;endif; ?>
+
+								</tbody>  
+							</table>  
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+<footer>    
+
+</footer>
+</div>
+<!-- /. PAGE INNER  -->
+</div>
+<!-- /. PAGE WRAPPER  -->
+</div>
+<!-- /. WRAPPER  -->
+<!-- JS Scripts-->
+<!-- jQuery Js -->
+<script src="/static/assets/js/jquery-1.10.2.js"></script>
+
+<!-- Bootstrap Js -->
+<script src="/static/assets/js/bootstrap.min.js"></script>
+
+<script src="/static/assets/materialize/js/materialize.min.js"></script>
+
+<!-- Metis Menu Js -->
+<script src="/static/assets/js/jquery.metisMenu.js"></script>
+<!-- Morris Chart Js -->
+<script src="/static/assets/js/morris/raphael-2.1.0.min.js"></script>
+<script src="/static/assets/js/morris/morris.js"></script>
+
+
+<script src="/static/assets/js/easypiechart.js"></script>
+<script src="/static/assets/js/easypiechart-data.js"></script>
+
+<script src="/static/assets/js/Lightweight-Chart/jquery.chart.js"></script>
+
+<!-- Custom Js -->
+<script src="/static/assets/js/custom-scripts.js"></script> 
+
+
+</body>
+
+</html>
